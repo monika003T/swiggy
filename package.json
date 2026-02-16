@@ -1,0 +1,37 @@
+{
+  "name": "swiggy",
+  "version": "1.0.0",
+  "description": "React Web Application By Monika Thakur",
+  "keywords": [
+    "swiggy",
+    "food",
+    "react"
+  ],
+  "homepage": "https://github.com/monika003T/swiggy#readme",
+  "bugs": {
+    "url": "https://github.com/monika003T/swiggy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monika003T/swiggy.git"
+  },
+  "license": "ISC",
+  "author": "Monika Thakur",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "browserslist":[
+    "last 5 versions"
+  ]
+  
+  
+}
