@@ -19,7 +19,7 @@
   "author": "Monika Thakur",
   "scripts": {
     "test": "jest",
-    "start":"parcel index.html",
+    "start":"parcel practice.html",
     "build":"parcel build index.html"
   },
   "devDependencies": {

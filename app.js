@@ -16,13 +16,28 @@ const parent = React.createElement("div",{id:'parent'},
     React.createElement('h2',{key:5},"hello children2"),
 ]))
 
-// jsx is not html its a html like syntax
+// jsx is not html its a html like syntax react element
 const jsxHeading=<h1 id='heading'>Namaste monika</h1>;
 console.log(jsxHeading)
 
-const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(jsxHeading);
 
+
+// react functional components=normal components that returns some jsx
+//one way
+const HeadingComponents=()=>{
+    return <h1>functional components</h1>;
+}
+// another cool way
+const AnotherComponent=()=>(
+    
+    <div id='container'>
+         <HeadingComponents/>
+<h1 className="cool">Namaste Monika ji</h1>
+</div>
+);
+
+const root =ReactDOM.createRoot(document.getElementById('root'));
+root.render(<AnotherComponent/>);
 
 
 
