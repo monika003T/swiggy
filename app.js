@@ -1,44 +1,60 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
-
-
-const heading=React.createElement("h1",{},"hello from react");
-
-
-//nested div
-const parent = React.createElement("div",{id:'parent'},
-    [React.createElement("div",{key:0},
-    [React.createElement('h1',{key:1},"hello Monika"),
-    React.createElement('h1',{key:2},"hello children1")])],
-
-    React.createElement('div',{key:3},[
-    React.createElement('h2',{key:4},"hello children2"),
-    React.createElement('h2',{key:5},"hello children2"),
-]))
-
-// jsx is not html its a html like syntax react element
-const jsxHeading=<h1 id='heading'>Namaste monika</h1>;
-console.log(jsxHeading)
-
-
-
-// react functional components=normal components that returns some jsx
-//one way
-const HeadingComponents=()=>{
-    return <h1>functional components</h1>;
+const StyleCard={
+    backgroundColor:"#f0f0f0",
 }
-// another cool way
-const AnotherComponent=()=>(
-    
-    <div id='container'>
-         <HeadingComponents/>
-<h1 className="cool">Namaste Monika ji</h1>
-</div>
-);
-
-const root =ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AnotherComponent/>);
-
-
-
-
+const Header=()=>{
+    return(
+        <div className='header'>
+            <div>
+                <img className='logo' height='100px' width='100px' src='https://static.vecteezy.com/system/resources/previews/011/406/936/large_2x/food-signal-online-food-ordering-logo-design-order-food-on-internet-restaurant-cafe-meals-delivery-online-free-vector.jpg'/>
+            </div>
+            <div className='nav-items'>
+                <ul>
+                    <li>Home</li>
+                    <li>Cart</li>
+                    <li>About us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
+    )
+}
+const ResturantCard=(props)=>{
+    const {resName, cuisine,rating,delivery}= props
+    return(
+        <div className='res-card' style={StyleCard}>
+            <img className="res-logo" alt='res-logo'
+            src='https://purendesi.in/wp-content/uploads/2024/12/Andhra-Style-Chicken-Biryani-500x500.jpg'/>
+            <h3>{resName}</h3>
+            <h4>{cuisine}</h4>
+            <h4>{rating}</h4>
+            <h5>{delivery}</h5>
+        </div>
+    )
+}
+const Body=()=>{
+    return(
+        <div className='body' >
+            <div className="search">Search</div>
+            <div className='res-container'>
+                    <ResturantCard resName="Meghana Foods" cuisine="Biryani, Indian, Asian" rating="4.4" delivery="38 min"/>
+                    <ResturantCard  resName="Burger Farms" cuisine="Burger, Rolls" rating ="4.5" delivery= "12 min"/>
+                   
+                   
+            </div>
+           
+        </div>
+    );
+};
+const AppLayout=()=>{
+    return(
+        <div className='app'>
+             <Header />
+          <Body />
+        </div>
+       
+    )
+}
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<AppLayout />);
