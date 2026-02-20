@@ -21,7 +21,7 @@
     margin:5px;
     padding:5px;
     width:200px;
-    height:400px;
+    height:450px;
     border:1px solid black;
    
 
@@ -43,4 +43,9 @@
 .res-card:hover{
     cursor:pointer;
     border:1px solid black;
+}
+.filter-btn{
+    padding:10px;
+    margin:10px;
+    cursor:pointer;
 }
