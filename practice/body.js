@@ -1,11 +1,14 @@
-
+import resList from "../utils/mockdata";
 import RestaurantCard from "./RestaurantCard";
 import {useState,useEffect} from "react";
+
+
+
 
 const Body=()=>{
     
     //usestate hooks
-    const [listOfRestaurants,setListOfRestaurant]=useState([])
+    const [listOfRestaurants,setListOfRestaurant]=useState(resList)
     
     useEffect(()=>{
         fetchData();
@@ -16,7 +19,6 @@ const Body=()=>{
 
         const json=await data.json();
         console.log(json);
-        setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
   
