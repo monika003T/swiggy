@@ -8,24 +8,21 @@ const Body=()=>{
     //usestate hooks
     const [listOfRestaurants,setListOfRestaurant]=useState([])
     
-    useEffect(()=>{
-        fetchData();
-    },[]);
-    const fetchData=async()=>{
-      const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.7287381&lng=75.80759929999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
-        
+    useEffect(()=>{ fetchData(); },[]); const fetchData=async()=>{ const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.7287381&lng=75.80759929999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
 
-        const json=await data.json();
-        console.log(json);
-        setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    };
-  if(listOfRestaurants===0){
-    return <Shimmer />
-    
-  }
+  const json = await data.json();
+  console.log(json);
+
+  setListOfRestaurant(
+    json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  );
+};
+    //conditional rendering
+  
   
 
-    return(
+    return listOfRestaurants.length===0 ? <Shimmer />:(
+        
         <div className='body' >
             <div className="filter">
                 <button className="filter-btn" 
@@ -49,4 +46,5 @@ const Body=()=>{
         </div>
     );
 };
+
 export default Body;

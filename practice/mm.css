@@ -49,3 +49,12 @@
     margin:10px;
     cursor:pointer;
 }
+.shimmer-cards{
+  margin:20px;
+  width:200px;
+  height:400px;
+  background-color: grey
+}
+.shimmer-container{
+  display:flex;
+}

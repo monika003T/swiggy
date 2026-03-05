@@ -19,19 +19,18 @@
   "author": "Monika Thakur",
   "scripts": {
     "test": "jest",
-    "start":"parcel index.html",
-    "build":"parcel build index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "parcel": "^2.16.4"
   },
   "dependencies": {
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "shimmer": "^1.2.1"
   },
-  "browserslist":[
+  "browserslist": [
     "last 5 versions"
   ]
-  
-  
 }
