@@ -37,7 +37,41 @@ body {
   padding: 40px;
 }
 
+.filter{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg, #dfeae4, #a5c0db);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 242, 96, 0.6);
+  transition: all 0.3s ease;
+  
+}
+.search-box {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  width: 300px;
+  font-size: 16px;
+}
+.search-btn {
+  justify-content: spa;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg, #0adae9, #1bb1ac);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(4, 142, 152, 0.6);
+  transition: all 0.3s ease;
+}
 .filter-btn {
+
   padding: 12px 24px;
   border-radius: 30px;
   border: none;
