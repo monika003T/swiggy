@@ -2,5 +2,5 @@
 /dist
 .parcel-cache
 package-lock.json 
-packegae.json
+package.json
 ../utils
