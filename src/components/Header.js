@@ -20,6 +20,7 @@ const Header=()=>{
                     <li>Cart</li>
                     <li>About us</li>
                     <li>Cart</li>
+                    <li>Contact</li>
                     <button className="login-btn" 
                         onClick={()=>{
                         isLoggedIn==="Login"? setIsLoggedIn("Logout"): setIsLoggedIn("Login");
