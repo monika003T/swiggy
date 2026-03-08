@@ -1,8 +1,14 @@
 import {LOGO_URL} from "../utils/constants"
-import {useState} from "react";
+import {useState,useEffect} from "react";
+
+
 const Header=()=>{
-    
+    console.log("Header rendered");
     const [isLoggedIn,setIsLoggedIn]=useState("Login");
+
+    useEffect(()=>{
+        console.log("useEffect called")
+    })
     return(
         <div className='header'>
             <div>
@@ -15,7 +21,7 @@ const Header=()=>{
                     <li>About us</li>
                     <li>Cart</li>
                     <button className="login-btn" 
-                    onClick={()=>{
+                        onClick={()=>{
                         isLoggedIn==="Login"? setIsLoggedIn("Logout"): setIsLoggedIn("Login");
                         console.log(isLoggedIn);
 
@@ -25,5 +31,6 @@ const Header=()=>{
         </div>
     )
 }
+
 
 export default Header;
