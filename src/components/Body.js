@@ -25,10 +25,10 @@ const Body=()=>{
   console.log(json);
 
   setListOfRestaurant(
-    json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants||[]
   );
   setFilteredRestaurants(
-    json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants||[]
   );
 
 };

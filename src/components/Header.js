@@ -1,6 +1,6 @@
 import {LOGO_URL} from "../utils/constants"
 import {useState,useEffect} from "react";
-
+import {Link} from "react-router-dom";
 
 const Header=()=>{
     console.log("Header rendered");
@@ -16,11 +16,11 @@ const Header=()=>{
             </div>
             <div className='nav-items'>
                 <ul>
-                    <li>Home</li>
+                    <li >Home</li>
                     <li>Cart</li>
-                    <li>About us</li>
+                    <li> <Link to="/about">About us</Link></li>
                     <li>Cart</li>
-                    <li>Contact</li>
+                    <li><Link to="/contact">Contact</Link></li>
                     <button className="login-btn" 
                         onClick={()=>{
                         isLoggedIn==="Login"? setIsLoggedIn("Logout"): setIsLoggedIn("Login");
